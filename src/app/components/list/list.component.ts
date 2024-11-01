@@ -10,7 +10,7 @@ export class ListComponent {
   
 categories: any[] = [];
 selectedCategory: string = '';
-competenceList: string[] = [];
+competencelist: string[] = [];
 
 constructor(private dataService: DataService) {}
 
@@ -28,7 +28,7 @@ loadCompetenceData() {
 
     if (this.categories.length > 0) {
       this.selectedCategory = this.categories[0].value;
-      this.competenceList = data[this.selectedCategory];
+      this.competencelist = data[this.selectedCategory];
     }
   });
 }
@@ -40,7 +40,7 @@ onCategoryChange(event: any) {
 
 loadCompetenceDataForCategory() {
   this.dataService.getSCompetenceData().subscribe(data => {
-    this.competenceList = data[this.selectedCategory];
+    this.competencelist = data[this.selectedCategory];
   });
 }
 
