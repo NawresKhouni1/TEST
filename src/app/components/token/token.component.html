@@ -1,0 +1,15 @@
+<div class="col-12 lg:col-6">
+    
+      
+  <div class="card">  
+    <h3>Total</h3>
+    <p-progressBar [value]="100" [showValue]="true"></p-progressBar>
+    <p>{{ total }}</p>
+  </div>
+  
+  <div class="card">  
+    <h3>Consumed</h3>
+    <p-progressBar [value]="(consumed / total) * 100" [showValue]="true"></p-progressBar>
+    <p>{{ consumed }} sur {{ total }} ({{ (consumed / total) * 100 | number:'1.0-0' }}%)</p>
+  </div>
+</div>
